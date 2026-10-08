@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { usePortfolio } from '../context/PortfolioContext';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { ScrollReveal } from './ScrollReveal';
 import { 
   ArrowRight, 
@@ -104,7 +105,7 @@ export const Hero = ({ onOpenResume, onOpenEditProfile }) => {
                     {/* Photo from CV */}
                     <div className="w-24 h-32 sm:w-28 sm:h-38 md:w-32 md:h-44 rounded-2xl overflow-hidden border-2 border-indigo-500/40 shadow-lg shrink-0 bg-slate-100 dark:bg-slate-800">
                       <img 
-                        src={`${import.meta.env.BASE_URL}profile.png`} 
+                        src={resolveAssetUrl('profile.png')} 
                         alt="Mr. Somlak Ngamkoh" 
                         className="w-full h-full object-cover object-top"
                         onError={(e) => {

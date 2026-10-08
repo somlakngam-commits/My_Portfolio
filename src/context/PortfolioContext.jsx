@@ -13,7 +13,7 @@ export const PortfolioProvider = ({ children }) => {
           localStorage.removeItem('my_portfolio_data');
           return initialData;
         }
-        const creds = (!parsed.credentials || parsed.credentials?.engineeringLicense?.licenseNo === "ภก. 89412" || !parsed.credentials?.engineeringLicense?.imageUrl)
+        const creds = (!parsed.credentials || parsed.credentials?.engineeringLicense?.licenseNo === "ภก. 89412" || !parsed.credentials?.engineeringLicense?.imageUrl || parsed.credentials?.engineeringLicense?.imageUrl === "/coe_license.jpg" || parsed.credentials?.englishProficiency?.imageUrl === "/toeic_score.jpg")
           ? initialData.credentials
           : parsed.credentials;
         const stats = (!parsed.stats || parsed.stats[0]?.value === "6+" || parsed.stats[0]?.labelTh === "ปี ประสบการณ์สายการผลิตความแม่นยำสูง")

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { usePortfolio } from '../context/PortfolioContext';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { ScrollReveal } from './ScrollReveal';
 import { 
   Award, 
@@ -113,16 +114,17 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
                   <div className="mb-5">
                     <div 
                       onClick={() => setActiveModalImage({
-                        url: engineeringLicense.imageUrl,
+                        url: resolveAssetUrl(engineeringLicense.imageUrl),
                         title: lang === 'th' ? 'ใบอนุญาตประกอบวิชาชีพวิศวกรรมควบคุม (กว.)' : 'Thai Professional Engineering License',
                         subtitle: `${engineeringLicense.licenseTypeTh} • ${engineeringLicense.disciplineTh} • ${engineeringLicense.licenseNo}`
                       })}
                       className="group relative rounded-2xl overflow-hidden border-2 border-indigo-100 dark:border-indigo-900/50 bg-slate-950 shadow-md cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-200"
                     >
                       <img 
-                        src={engineeringLicense.imageUrl} 
+                        src={resolveAssetUrl(engineeringLicense.imageUrl)} 
                         alt="ใบอนุญาตประกอบวิชาชีพวิศวกรรมควบคุม นายสมลักษณ์ งามเกาะ" 
                         className="w-full h-44 sm:h-52 object-cover object-center group-hover:scale-102 transition-transform duration-300"
+                        loading="lazy"
                       />
                       {/* Gradient Overlay & Zoom Prompt */}
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end justify-between p-3 sm:p-4 text-white">
@@ -269,16 +271,17 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
                   <div className="mb-5">
                     <div 
                       onClick={() => setActiveModalImage({
-                        url: englishProficiency.imageUrl,
+                        url: resolveAssetUrl(englishProficiency.imageUrl),
                         title: 'TOEIC® Listening & Reading Official Score Report',
                         subtitle: `Report No: ${englishProficiency.reportNo} • Total Score: ${englishProficiency.totalScore} / 990`
                       })}
                       className="group relative rounded-2xl overflow-hidden border-2 border-blue-100 dark:border-blue-900/50 bg-slate-950 shadow-md cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-200"
                     >
                       <img 
-                        src={englishProficiency.imageUrl} 
+                        src={resolveAssetUrl(englishProficiency.imageUrl)} 
                         alt="TOEIC Official Score Report นายสมลักษณ์ งามเกาะ" 
                         className="w-full h-44 sm:h-52 object-cover object-center group-hover:scale-102 transition-transform duration-300"
+                        loading="lazy"
                       />
                       {/* Gradient Overlay & Zoom Prompt */}
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end justify-between p-3 sm:p-4 text-white">
@@ -457,7 +460,7 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
             {/* Modal Image View */}
             <div className="p-2 sm:p-4 bg-slate-950/40 flex items-center justify-center max-h-[75vh] overflow-auto">
               <img 
-                src={activeModalImage.url} 
+                src={resolveAssetUrl(activeModalImage.url)} 
                 alt={activeModalImage.title} 
                 className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain shadow-lg"
               />

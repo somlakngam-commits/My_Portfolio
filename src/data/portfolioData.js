@@ -13,7 +13,7 @@ export const portfolioData = {
     nameTh: "นายสมลักษณ์ งามเกาะ",
     role: "Mechanical Design Engineer",
     roleTh: "วิศวกรเครื่องกล (Mechanical Design Engineer)",
-    avatar: "/profile.png",
+    avatar: `${import.meta.env.BASE_URL}profile.png`,
     subtitle: {
       en: "Mechanical Engineer specializing in high-precision component design. Dedicated to engineering problem-solving through SolidWorks 3D Design, structural strength and flow analysis using Finite Element Analysis (FEA), and 2D manufacturing drawings with GD&T control.",
       th: "วิศวกรเครื่องกล ผู้เชี่ยวชาญในสายงานการออกแบบ ชิ้นส่วนที่มีความแม่นยำสูง มุ่งเน้นการแก้ไขปัญหาด้วยการออกแบบ ผ่านโปรแกรม SolidWorks 3D Design, การวิเคราะห์ความแข็งแรง, อัตราการไหล ด้วย Finite Element Analysis (FEA) รวมถึงการจัดทำ แบบสั่งการผลิต (2D Drawing) พร้อมควบคุมด้วย GD&T"
@@ -385,7 +385,7 @@ export const portfolioData = {
       memberNo: "271506",
       issueDate: "11 Jan 2022 (11 ม.ค. 2565)",
       expiryDate: "10 Jan 2027 (10 ม.ค. 2570)",
-      imageUrl: "/coe_license.jpg",
+      imageUrl: `${import.meta.env.BASE_URL}coe_license.jpg`,
       statusTh: "สถานะ: ใบอนุญาตสมบูรณ์ (หมดอายุ 10 ม.ค. 2570)",
       statusEn: "License Status: Active (Valid until 10 Jan 2027)",
       issueYear: "2565 (2022)",
@@ -414,7 +414,7 @@ export const portfolioData = {
       reportNo: "IJ 0080518",
       testDate: "April 4, 2026",
       testDateTh: "4 เมษายน 2569",
-      imageUrl: "/toeic_score.jpg",
+      imageUrl: `${import.meta.env.BASE_URL}toeic_score.jpg`,
       levelTh: "ระดับ: สื่อสารในการทำงานได้ (Independent User / CEFR B1)",
       levelEn: "Proficiency Level: Working Proficiency (CEFR B1)",
       summaryTh: "คะแนนสอบ TOEIC อย่างเป็นทางการ 590 คะแนน (Listening 345, Reading 245) พร้อมสำหรับการสื่อสารทางเทคนิค ประสานงานในกระบวนการผลิต และทำความเข้าใจคู่มือสเปกเครื่องจักรมาตรฐานสากล",

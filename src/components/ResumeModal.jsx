@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { usePortfolio } from '../context/PortfolioContext';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { 
   X, 
   Printer, 
@@ -83,7 +84,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
             <div className="flex items-start gap-5">
               <div className="w-20 h-28 sm:w-24 sm:h-32 rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 shadow-sm shrink-0 bg-slate-100 dark:bg-slate-800">
                 <img 
-                  src={`${import.meta.env.BASE_URL}profile.png`} 
+                  src={resolveAssetUrl('profile.png')} 
                   alt={personal.name} 
                   className="w-full h-full object-cover object-top"
                   onError={(e) => { e.target.style.display = 'none'; }}
