@@ -20,10 +20,10 @@ export const Hero = ({ onOpenResume, onOpenEditProfile }) => {
   const { personal, stats } = data;
 
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] pt-20 sm:pt-24 pb-6 sm:pb-8 flex flex-col justify-between overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] pt-20 sm:pt-24 pb-6 sm:pb-8 flex flex-col justify-between overflow-hidden w-full max-w-full">
       {/* Background Decorative Gradient Blobs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-indigo-500/15 via-blue-500/10 to-teal-500/10 blur-3xl -z-10 rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 -right-20 w-72 h-72 bg-blue-500/10 blur-3xl -z-10 rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-indigo-500/15 via-blue-500/10 to-teal-500/10 blur-3xl -z-10 rounded-full pointer-events-none max-w-full" />
+      <div className="absolute top-1/3 right-0 sm:-right-20 w-72 h-72 bg-blue-500/10 blur-3xl -z-10 rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center my-auto py-2 sm:py-4">

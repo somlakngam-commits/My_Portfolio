@@ -21,7 +21,7 @@ function PortfolioApp() {
   const [isEditProfileOpen, setIsEditProfileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-300">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-300">
       
       {/* Dynamic Scroll Progress Bar & Scroll-Up Controls */}
       <ScrollDynamics />
@@ -34,7 +34,7 @@ function PortfolioApp() {
       />
 
       {/* Main Sections */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* Hero Section with Interactive Design Token Card */}
         <Hero 
           onOpenResume={() => setIsResumeOpen(true)} 

@@ -24,7 +24,7 @@ export const WhyHireMe = () => {
   };
 
   return (
-    <section id="why-hire-me" className="py-20 sm:py-24 relative overflow-hidden">
+    <section id="why-hire-me" className="py-20 sm:py-24 relative overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

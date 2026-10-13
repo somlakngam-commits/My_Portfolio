@@ -12,7 +12,7 @@ export const ScrollReveal = ({
   delay = 0,
   duration = 650,
   threshold = 0.12,
-  once = false, // Set false so scrolling back UP dynamically re-triggers animations
+  once = true, // Set true so once revealed, elements stay stable when scrolling back UP
   as = 'div'
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +30,10 @@ export const ScrollReveal = ({
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          if (once && entry.target) {
+            observer.unobserve(entry.target);
+          }
         } else if (!once) {
-          // Allows dynamic animation when scrolling back up
           setIsVisible(false);
         }
       });
@@ -56,9 +58,9 @@ export const ScrollReveal = ({
         case 'fade-down':
           return 'opacity-0 -translate-y-7 scale-[0.985] blur-[0.5px]';
         case 'fade-left':
-          return 'opacity-0 -translate-x-6';
+          return 'opacity-0 md:-translate-x-6 translate-y-4';
         case 'fade-right':
-          return 'opacity-0 translate-x-6';
+          return 'opacity-0 md:translate-x-6 translate-y-4';
         case 'zoom-in':
           return 'opacity-0 scale-95 blur-[0.5px]';
         case 'fade':

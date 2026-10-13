@@ -53,11 +53,11 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
   };
 
   return (
-    <section id="credentials" className="py-20 sm:py-24 bg-slate-100/60 dark:bg-slate-900/40 relative overflow-hidden border-t border-slate-200/60 dark:border-slate-800/60">
+    <section id="credentials" className="py-20 sm:py-24 bg-slate-100/60 dark:bg-slate-900/40 relative overflow-hidden w-full max-w-full border-t border-slate-200/60 dark:border-slate-800/60">
       
       {/* Background Ambient Glows */}
-      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-10 sm:-left-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/5 rounded-full blur-3xl pointer-events-none max-w-full" />
+      <div className="absolute bottom-1/4 right-0 sm:-right-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none max-w-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -83,7 +83,7 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           
           {/* Card 1: ใบอนุญาตประกอบวิชาชีพวิศวกรรมควบคุม (COE License Card) */}
-          <ScrollReveal animation="fade-right" delay={100} className="lg:col-span-6 flex flex-col">
+          <ScrollReveal animation="fade-up" delay={100} className="lg:col-span-6 flex flex-col">
             <div className="flex-1 rounded-3xl bg-gradient-to-br from-white via-white to-indigo-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/20 border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-lg shadow-indigo-500/5 relative overflow-hidden flex flex-col justify-between">
               
               <div>
@@ -240,7 +240,7 @@ export const CredentialsSection = ({ onOpenEditProfile }) => {
           </ScrollReveal>
 
           {/* Card 2: ผลสอบภาษาอังกฤษ TOEIC (TOEIC Official English Score Card) */}
-          <ScrollReveal animation="fade-left" delay={150} className="lg:col-span-6 flex flex-col">
+          <ScrollReveal animation="fade-up" delay={150} className="lg:col-span-6 flex flex-col">
             <div className="flex-1 rounded-3xl bg-gradient-to-br from-white via-white to-blue-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/20 border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-lg shadow-blue-500/5 relative overflow-hidden flex flex-col justify-between">
               
               <div>

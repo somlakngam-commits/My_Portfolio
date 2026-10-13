@@ -34,7 +34,7 @@ export const Projects = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 sm:py-24 relative">
+    <section id="projects" className="py-20 sm:py-24 relative overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -56,7 +56,7 @@ export const Projects = () => {
             </div>
 
             {/* Filter Tabs (Horizontal Scrollable on Mobile) */}
-            <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-x-auto no-scrollbar max-w-full shrink-0 -mx-4 px-4 sm:mx-0 sm:px-1">
+            <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-x-auto no-scrollbar max-w-full w-full sm:w-auto shrink-0">
               {categories.map((cat) => (
                 <button
                   key={cat.id}

@@ -86,7 +86,7 @@ export const ScrollDynamics = () => {
     <>
       {/* 1. Dynamic Top Reading Progress Bar */}
       <div 
-        className="fixed top-0 left-0 right-0 h-1 z-50 pointer-events-none bg-slate-200/30 dark:bg-slate-800/30"
+        className="fixed top-0 left-0 right-0 h-1 z-50 pointer-events-none bg-slate-200/30 dark:bg-slate-800/30 w-full max-w-full overflow-hidden"
         aria-hidden="true"
       >
         <div 
@@ -97,7 +97,7 @@ export const ScrollDynamics = () => {
 
       {/* 2. Dynamic Floating Scroll-Up Button & Current Section Indicator */}
       <div 
-        className={`fixed bottom-6 right-5 sm:right-8 z-40 flex items-center gap-2 transition-all duration-300 transform-gpu ${
+        className={`fixed bottom-6 right-4 sm:right-8 z-40 flex items-center gap-2 max-w-[calc(100vw-2rem)] transition-all duration-300 transform-gpu ${
           showScrollTop 
             ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' 
             : 'opacity-0 translate-y-8 scale-90 pointer-events-none'
