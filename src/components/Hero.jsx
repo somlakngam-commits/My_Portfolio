@@ -83,10 +83,10 @@ export const Hero = ({ onOpenResume, onOpenEditProfile }) => {
           {/* Right Column: Engineering Credential Card */}
           <div className="lg:col-span-6 w-full">
             <ScrollReveal animation="zoom-in" delay={150}>
-              <div className="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 md:p-8 shadow-2xl shadow-indigo-500/10 backdrop-blur-xl">
+              <div className="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800/90 p-4 sm:p-7 md:p-8 shadow-2xl shadow-indigo-500/10 backdrop-blur-xl">
                 
                 {/* Card Header */}
-                <div className="flex items-center justify-between pb-4 sm:pb-5 border-b border-slate-100 dark:border-slate-800">
+                <div className="flex items-center justify-between pb-3.5 sm:pb-5 border-b border-slate-100 dark:border-slate-800">
                   <div className="flex items-center gap-2.5">
                     <div className="w-3.5 h-3.5 rounded-full bg-red-400/80"></div>
                     <div className="w-3.5 h-3.5 rounded-full bg-amber-400/80"></div>
@@ -100,10 +100,10 @@ export const Hero = ({ onOpenResume, onOpenEditProfile }) => {
                 </div>
 
                 {/* Profile Card Content */}
-                <div className="py-5 sm:py-6 space-y-5 sm:space-y-6">
-                  <div className="flex items-start gap-4 sm:gap-6">
+                <div className="py-4 sm:py-6 space-y-4 sm:space-y-6">
+                  <div className="flex items-start gap-3.5 sm:gap-6">
                     {/* Photo from CV */}
-                    <div className="w-24 h-32 sm:w-28 sm:h-38 md:w-32 md:h-44 rounded-2xl overflow-hidden border-2 border-indigo-500/40 shadow-lg shrink-0 bg-slate-100 dark:bg-slate-800">
+                    <div className="w-24 sm:w-28 md:w-32 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-indigo-500/40 shadow-lg shrink-0 bg-slate-100 dark:bg-slate-800 self-start">
                       <img 
                         src={resolveAssetUrl('profile.png')} 
                         alt="Mr. Somlak Ngamkoh" 
@@ -114,29 +114,38 @@ export const Hero = ({ onOpenResume, onOpenEditProfile }) => {
                       />
                     </div>
 
-                    <div className="space-y-2 flex-1 min-w-0 text-left">
-                      <span className="text-xs sm:text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold block truncate">
+                    <div className="space-y-1.5 sm:space-y-2 flex-1 min-w-0 text-left">
+                      <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold block">
                         Engineering Credential
                       </span>
-                      <h4 className="text-lg sm:text-2xl md:text-2xl font-extrabold text-slate-900 dark:text-white leading-tight truncate">
+                      <h4 className="text-base sm:text-2xl font-extrabold text-slate-900 dark:text-white leading-tight break-words">
                         {lang === 'th' ? personal.nameTh : personal.name}
                       </h4>
-                      <span className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 block truncate">
+                      <span className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 block leading-snug break-words">
                         {lang === 'th' ? personal.roleTh : personal.role}
                       </span>
 
-                      <div className="pt-2 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-mono">
-                        <div className="flex items-center gap-2 min-w-0">
-                          <Building className="w-4 h-4 text-indigo-500 shrink-0" />
-                          <span className="truncate" title="Seagate Technology (Prime Design Solutions)">Seagate Technology (Prime Design Solutions)</span>
+                      <div className="pt-1.5 sm:pt-2 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-mono">
+                        <div className="flex items-start gap-2">
+                          <Building className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500 shrink-0 mt-0.5" />
+                          <span className="break-words leading-tight" title="Seagate Technology (Prime Design Solutions)">
+                            Seagate Technology (Prime Design Solutions)
+                          </span>
                         </div>
-                        <div className="flex items-center gap-2 min-w-0">
-                          <GraduationCap className="w-4 h-4 text-indigo-500 shrink-0" />
-                          <span className="truncate">B.Eng. Mechanical (Vongchavalitkul)</span>
+                        <div className="flex items-start gap-2">
+                          <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500 shrink-0 mt-0.5" />
+                          <span className="break-words leading-tight">
+                            B.Eng. Mechanical (Vongchavalitkul)
+                          </span>
                         </div>
-                        <div className="flex items-center gap-2 min-w-0">
-                          <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                          <span className="font-semibold text-slate-800 dark:text-slate-200">098-635-7422</span>
+                        <div className="flex items-center gap-2">
+                          <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 shrink-0" />
+                          <a 
+                            href="tel:0986357422" 
+                            className="font-semibold text-slate-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                          >
+                            098-635-7422
+                          </a>
                         </div>
                       </div>
                     </div>
